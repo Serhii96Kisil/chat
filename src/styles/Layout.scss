@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 21px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+.appWrap {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 80% 50px;
+  grid-template-areas:
+    "header header "
+    "side main "
+    "footer footer ";
+
+  .mainContent {
+    background-image: url(../images/Main.jpg);
+  }
+
+  .headerStyle {
+    grid-area: header;
+    text-align: center;
+    color: #fff;
+    line-height: 64px;
+    background-color: rgb(123, 188, 234);
+    padding-top: 15px;
+    .headerStyleContainer {
+      justify-content: space-between;
+      flex-direction: row;
+      .Title {
+        display: inline-block;
+      }
+    }
+  }
+  .contentStyle {
+    grid-area: main;
+    text-align: center;
+    min-height: 800px;
+    color: #fff;
+    line-height: 120px;
+    background: transparent;
+    padding: 10px;
+  }
+  .siderStyle {
+    grid-area: side;
+    min-width: 300px !important;
+    max-width: 300px !important;
+    text-align: center;
+    min-height: 800px;
+    line-height: 50%;
+    color: #000;
+    background-color: rgba(123, 188, 234, 0.5);
+
+    .YourChats {
+      position: relative;
+      color: #fff;
+      margin-bottom: 3px;
+      background-image: url(../images/ChatContact.jpg);
+    }
+    .YourChats::after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 1px;
+      background-color: rgb(123, 188, 234);
+      box-shadow: -1px 1px 4px 2px rgb(123 188 234);
+    }
+  }
+  .footerStyle {
+    grid-area: footer;
+    text-align: center;
+    color: #fff;
+    background-color: rgb(123, 188, 234);
+  }
+}

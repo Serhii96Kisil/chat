@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { Layout, Space } from "antd";
+import "./styles/Layout.scss";
+import "./components/index";
+import { ChatList, ActiveRoom } from "./components";
+import { LoginBtn, AddChatComp } from "./buttons";
+
+const { Header, Footer, Sider, Content } = Layout;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Space className="appWrap" direction="vertical" style={{ width: "100%" }} size={[0, 48]}>
+                <Layout>
+                    <Header className="headerStyle">
+                        <div className="headerStyleContainer">
+                            <div className="Title">My Chat</div>
+                            <LoginBtn />
+                        </div>
+                    </Header>
+                    <Layout className="mainContent">
+                        <Sider theme="light" className="siderStyle" breakpoint={"xs"}>
+                            <div>
+                                <div className="YourChats">Your Chats</div>
+                                <AddChatComp />
+                                <ChatList />
+                            </div>
+                        </Sider>
+                        <Content className="contentStyle">
+                            <ActiveRoom />
+                        </Content>
+                    </Layout>
+                    <Footer className="footerStyle">Это я сделал</Footer>
+                </Layout>
+            </Space>
+        </div>
+    );
 }
 
 export default App;

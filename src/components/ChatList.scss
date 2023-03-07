@@ -1,0 +1,17 @@
+.chatElement {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 80px;
+  color: #fff;
+  font-size: 16px;
+  background-image: url(../images/ChatContact.jpg);
+  border: 1px solid #042855;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+.chatElement:hover {
+  border-color: #4096ff;
+  box-shadow: -1px 1px 4px 2px rgb(123 188 234);
+}

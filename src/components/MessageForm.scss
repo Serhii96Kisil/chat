@@ -1,0 +1,17 @@
+.MassageFormWrapp {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+
+  .MassageFormTextArea {
+    padding-right: 40px;
+    background-color: rgb(149, 209, 149);
+  }
+  .MessageButton {
+    position: relative;
+    right: 36px;
+    bottom: -15px;
+    padding-left: 3px;
+    padding-top: 6px;
+  }
+}
